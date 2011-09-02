@@ -7,6 +7,10 @@
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
-<AnalogClock android:id="@+id/analogClock1" android:layout_width="wrap_content" android:layout_height="wrap_content"></AnalogClock>
-<DigitalClock android:text="DigitalClock" android:id="@+id/digitalClock1" android:layout_width="wrap_content" android:layout_height="wrap_content"></DigitalClock>
+<Button 
+android:text="@string/enumerate" 
+android:id="@+id/enumerate" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+/>
 </LinearLayout>
