@@ -73,7 +73,7 @@ public class TestingActivity extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 					logarea.append("CARP");
-					System.out.println("can't create RF Comm Socket");
+					System.out.println("Interuppted");
 				}	
 			}
         });
