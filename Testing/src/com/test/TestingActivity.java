@@ -57,9 +57,19 @@ public class TestingActivity extends Activity {
 					logarea.append("connected?, getting OStrean,IStream and trying to send");
 					OutputStream os = socket.getOutputStream();
 					InputStream is = socket.getInputStream();
-					os.write(0);
-					logarea.append("done i guess");
+					os.write("AT RV".getBytes("US_ASCII"));
+					logarea.append("done sent i guess, now waiting and reading");
+					Thread.sleep(1000);
+					byte[] stringbuff = new byte[256];
+					int numbytesread = is.read(stringbuff);
+					String msg = new String(stringbuff,0,numbytesread,"US_ASCII");
+					logarea.append("received message:"+msg);
 				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					logarea.append("CARP");
+					System.out.println("can't create RF Comm Socket");
+				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 					logarea.append("CARP");
