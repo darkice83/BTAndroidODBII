@@ -50,7 +50,7 @@ public class TestingActivity extends Activity {
 				}
 				logarea.append(" " + bDev.getBondState());
 				try {
-					logarea.append("trying to create socket");
+					logarea.append("trying to create socket2");
 					BluetoothSocket socket = bDev.createRfcommSocketToServiceRecord(uuid);
 					logarea.append("socket created? trying to connect");
 					socket.connect();
